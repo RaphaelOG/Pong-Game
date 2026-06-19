@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 1600px;
+  padding: 16px 24px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #00f5ff, #8c52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hud {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hud-item {
+  text-align: center;
+}
+
+.hud-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2px;
+}
+
+.hud-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hud-value.player-score {
+  color: #00f5ff;
+}
+
+.hud-value.ai-score {
+  color: #ff6b6b;
+}
+
+.game-wrapper {
+  position: relative;
+  margin: 8px 16px 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(140, 82, 255, 0.35), 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+canvas {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.overlay.hidden {
+  opacity: 0;
+}
+
+.overlay-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-shadow: 0 0 30px rgba(140, 82, 255, 0.8);
+}
+
+.overlay-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay-hint {
+  margin-top: 24px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  color: #00f5ff;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+footer {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.controls kbd {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  margin: 0 2px;
+}
+
+.status-bar {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: right;
+}
+
+.status-text {
+  font-family: 'Orbitron', sans-serif;
+  color: #8c52ff;
+}
