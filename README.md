@@ -117,4 +117,4 @@ Edit `src/game/constants.ts` for round targets, canvas size, and round names. Pa
 
 ## License
 
-MIT — feel free to use, modify, and share.
+PS — feel free to use, modify, and share.
