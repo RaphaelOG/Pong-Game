@@ -196,7 +196,7 @@ export class PongEngine {
   private spawnParticles(x: number, y: number, color: string, count = 12): void {
     for (let i = 0; i < count; i++) {
       const angle = Math.random() * Math.PI * 2;
-      const speed = 2 + Math.random() * 6;
+      const speed = 0.5 + Math.random() * 4;
       this.particles.push({
         x,
         y,

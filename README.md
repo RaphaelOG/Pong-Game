@@ -89,7 +89,7 @@ Pong Game/
 │   ├── game/          # Game engine, types, constants
 │   ├── hooks/         # usePongGame hook
 │   ├── App.tsx        # Root layout
-│   ├── App.css        # Styles (same design as original)
+│   ├── App.css        # Styles
 │   └── main.tsx       # Entry point
 ├── index.html         # Vite HTML shell
 ├── package.json
